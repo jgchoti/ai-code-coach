@@ -1,0 +1,100 @@
+{% extends "base.html" %} {% block content %}
+<div class="header">
+  <h1>🌱 Your Challenge is Ready!</h1>
+</div>
+
+<div class="card">
+  <div class="card-farmer">
+    <strong>👨‍🌾 Farmer Level:</strong> {{ level.title() }} |
+    <strong>🌾 Crop Type:</strong> {{ language }}
+  </div>
+
+  <div class="code-area">{{ challenge }}</div>
+</div>
+
+<div class="card">
+  <h2>🚜 Submit Your Harvest</h2>
+  <p class="mb-20">Write your solution and submit it for expert review!</p>
+
+  <form method="POST" action="/review">
+    <div class="mb-20">
+      <label><strong>💻 Your Code Solution:</strong></label>
+      <textarea
+        name="code"
+        rows="10"
+        placeholder="# Write your farming solution here...
+# Remember to use good variable names!
+
+def harvest_solution():
+    # Your code goes here
+    return 'Hello, farm!'
+
+print(harvest_solution())"
+        required
+      ></textarea>
+    </div>
+
+    <input type="hidden" name="challenge_desc" value="{{ challenge }}..." />
+
+    <div class="center">
+      <button type="submit" class="btn btn-orange">
+        🔍 Get Expert Review!
+      </button>
+    </div>
+  </form>
+</div>
+
+<div class="card center">
+  <h3>🎯 Quick Actions</h3>
+  <a href="/challenge" class="btn">🔄 New Challenge</a>
+  <a href="/" class="btn btn-orange">🏠 Back to Farm</a>
+</div>
+
+<script>
+  window.onload = function () {
+    const language = "{{ language }}".toLowerCase();
+    const textarea = document.querySelector('textarea[name="code"]');
+
+    let template = "";
+
+    if (language.includes("python")) {
+      template = `# {{ level.title() }} Python Farmer 🐍🌾
+# Write your solution here!
+
+def harvest_solution():
+    # Your code goes here
+    pass
+
+# Test your solution
+print("Testing harvest...")`;
+    } else if (language.includes("javascript")) {
+      template = `// {{ level.title() }} JavaScript Farmer ⚡🌾
+// Write your solution here!
+
+function harvestSolution() {
+    // Your code goes here
+    return "Hello from the farm!";
+}
+
+// Test your solution
+console.log(harvestSolution());`;
+    } else if (language.includes("java")) {
+      template = `// {{ level.title() }} Java Farmer ☕🌾
+public class FarmHarvest {
+    public static void main(String[] args) {
+        // Your code goes here
+        System.out.println("Hello from the farm!");
+    }
+}`;
+    } else {
+      template = `// {{ level.title() }} {{ language }} Farmer 🌾
+// Write your solution here!
+
+// Your code goes here...`;
+    }
+
+    textarea.placeholder = template;
+  };
+</script>
+
+{% endblock %}

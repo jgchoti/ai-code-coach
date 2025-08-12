@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block content %}
+<div class="header">
+  <h1>CODE ACADEMY</h1>
+  <p>Grow your coding skills!</p>
+</div>
+
+<div class="card center">
+  <h2>Welcome, Future Farmer! 👨‍🌾</h2>
+</div>
+<a href="/challenge" class="btn btn-green">🌱 Get Challenges!</a>
+<div class="chicken"></div>
+<div class="butterfly"></div>
+<div class="card">
+  <h2>Submit Your Code Harvest</h2>
+  <br />
+  <br />
+  <form method="POST">
+    <div class="mb-20">
+      <textarea
+        name="code"
+        rows="16"
+        placeholder="Paste your code here..."
+        required
+      ></textarea>
+    </div>
+    <div class="center">
+      <button type="submit" class="btn btn-orange">
+        🔍 Get AI-Mentor Review!
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}
