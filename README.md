@@ -2,7 +2,7 @@
 
 ### AI Code Coach with Pixel Farm Vibes
 
-A charming farming-themed code coaching app inspired by **Stardew Valley**! Built with Flask and Google's Generative AI, where coding feels like tending a digital farm. 🌾
+A charming farming-themed code coaching app inspired by **Stardew Valley**! Built with Flask and Google's Generative AI. 🌾  **This is purely a fun project** no commercial intent 🌻 - This project was born from a love of **Stardew Valley** and the desire to make coding fun.
 
 ![Farmer Level](https://img.shields.io/badge/Farmer%20Level-Seedling%20to%20Tree-4CAF50)
 ![Crops](https://img.shields.io/badge/Crops-Python%20|%20JavaScript%20|%20Java%20|%20More-FF8C00)
@@ -20,13 +20,6 @@ A charming farming-themed code coaching app inspired by **Stardew Valley**! Buil
 - **🎮 Pixel Vibes** - Enjoy Stardew Valley-inspired animations.
 
 _Perfect for anyone who like a cozy farming adventure!_
-
----
-
-## 🎯 **Inspiration & Purpose**
-
-- This project was born from a love of **Stardew Valley** and the desire to make coding fun.
-- **This is purely a fun project** - no commercial intent 🌻
 
 ---
 
